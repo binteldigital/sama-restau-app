@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L'Escale Terracotta - Validation de commande</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f2f2d9",
+              "tertiary-fixed": "#ffdbc9",
+              "background": "#fbfbe2",
+              "tertiary-fixed-dim": "#ffb68c",
+              "secondary": "#735c00",
+              "primary-fixed": "#ffdad3",
+              "on-tertiary": "#ffffff",
+              "surface": "#fbfbe2",
+              "on-secondary-fixed-variant": "#574500",
+              "on-tertiary-fixed-variant": "#753401",
+              "on-surface-variant": "#56423e",
+              "surface-container-low": "#f5f5dc",
+              "on-primary": "#ffffff",
+              "secondary-fixed": "#ffe088",
+              "on-background": "#1b1d0e",
+              "on-primary-container": "#5a0d02",
+              "on-primary-fixed": "#3e0500",
+              "outline": "#89726d",
+              "surface-bright": "#fbfbe2",
+              "primary": "#9f402d",
+              "surface-variant": "#e4e4cc",
+              "on-tertiary-container": "#4b1e00",
+              "tertiary-container": "#d27d47",
+              "inverse-primary": "#ffb4a5",
+              "on-tertiary-fixed": "#321200",
+              "surface-tint": "#9f402d",
+              "on-secondary-container": "#745c00",
+              "outline-variant": "#ddc0ba",
+              "tertiary": "#934b19",
+              "on-error": "#ffffff",
+              "surface-container-high": "#eaead1",
+              "surface-container-highest": "#e4e4cc",
+              "error": "#ba1a1a",
+              "primary-fixed-dim": "#ffb4a5",
+              "on-secondary-fixed": "#241a00",
+              "on-primary-fixed-variant": "#802918",
+              "inverse-surface": "#303221",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#fed65b",
+              "surface-dim": "#dbdcc3",
+              "on-surface": "#1b1d0e",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#e9c349",
+              "primary-container": "#e2725b",
+              "surface-container": "#efefd7"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 32px 64px -12px rgba(27, 29, 14, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-[#FBFBE2]/80 dark:bg-stone-900/80 backdrop-blur-lg flex justify-between items-center w-full px-6 py-4 docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#9F402D] dark:text-[#E2725B]" data-icon="location_on">location_on</span>
+<h1 class="font-['Noto_Serif'] text-xl font-bold text-[#9F402D] dark:text-[#E2725B]">L'Escale Terracotta</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#9F402D] dark:text-[#E2725B] hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</header>
+<main class="max-w-3xl mx-auto px-6 pt-12 pb-24">
+<!-- Hero Title Section -->
+<section class="mb-12">
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-primary mb-4 leading-tight">Finaliser votre expérience</h2>
+<p class="text-on-surface-variant font-medium tracking-wide">Vérifiez vos informations pour une table parfaitement préparée.</p>
+</section>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 gap-12">
+<!-- Customer Form -->
+<section class="bg-surface-container-low rounded-xl p-8 editorial-shadow">
+<h3 class="font-label text-xs uppercase tracking-[0.2em] font-bold text-secondary mb-8">Informations de contact</h3>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative group">
+<label class="font-label text-[10px] uppercase font-bold text-on-surface-variant tracking-wider mb-2 block">Prénom</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary-container transition-all text-on-surface placeholder-on-surface-variant/40" placeholder="Jean" type="text"/>
+</div>
+<div class="relative group">
+<label class="font-label text-[10px] uppercase font-bold text-on-surface-variant tracking-wider mb-2 block">Nom</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary-container transition-all text-on-surface placeholder-on-surface-variant/40" placeholder="Dupont" type="text"/>
+</div>
+</div>
+<div class="relative">
+<label class="font-label text-[10px] uppercase font-bold text-on-surface-variant tracking-wider mb-2 block">Nombre de personnes</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg overflow-hidden w-fit">
+<button class="px-6 py-4 hover:bg-surface-container-high transition-colors active:scale-90" type="button">
+<span class="material-symbols-outlined text-primary" data-icon="remove">remove</span>
+</button>
+<input class="w-16 text-center border-none bg-transparent font-bold text-lg pointer-events-none" type="number" value="2"/>
+<button class="px-6 py-4 hover:bg-surface-container-high transition-colors active:scale-90" type="button">
+<span class="material-symbols-outlined text-primary" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</form>
+</section>
+<!-- Order Summary Bento -->
+<section class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/20 editorial-shadow">
+<div class="flex justify-between items-end mb-8">
+<h3 class="font-headline text-2xl font-bold text-primary">Récapitulatif</h3>
+<div class="text-right">
+<span class="font-label text-[10px] uppercase font-bold text-secondary tracking-widest block mb-1">Arrivée estimée</span>
+<p class="font-bold text-on-surface">20:30 Aujourd'hui</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex items-center justify-between group">
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img alt="Tajine de légumes" class="w-full h-full object-cover" data-alt="close-up shot of a steaming moroccan vegetable tajine in a terracotta pot with fresh herbs and couscous" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwQ9ZcfycePZ017ig_-8ObDolvZFONsuvAtdVrjtp-14M8fVoWEdaDegD1n21D393yD8dWOYd0Wln06Yr1ZWqQHhS2z-Y7AxMJBukjG9VMaflwTAFDiuuBLlV-M9-N3uVJ9jXh9-ivd8NAv9LKXAbDtB2PvKXdfJ7W4bCsx_mkn_3EkwU2NhAwx2eI0JCtA520R1677j53d1VnyPdagRFnS-4b-3ZMogebZwtfOLlOVtECvYhJgMy71G8cvOaLU0EaJeLwFQ36Bnvc"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Tajine de Légumes du Soleil</h4>
+<p class="text-sm text-on-surface-variant">Aux citrons confits et olives</p>
+</div>
+</div>
+<span class="font-bold text-on-surface">24,00 €</span>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img alt="Thé à la menthe" class="w-full h-full object-cover" data-alt="traditional moroccan mint tea being poured from a silver teapot into an ornate glass with fresh mint leaves visible" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeABnQiBywQw64c6hiHqzxkllZNbcZZH02UxKd0vVLLLwRliuiOPzG8uDAy4EM00QSTiNqmzbdHVmUrgF3naYnLRcaZJHibH-e9jnLk3dyCM8KIGCGIZYhwWSe5Hy4pJDf-9HxFuaR2mQikd9QkDePJdmFZae-HEkBzKHg8SXLwPc0WJAKpfxNWS7E9Mpdae1tTwSAeAq7I_-kCP1ahYRf6xix1IwkBqict-G7Y4RbFTBxA1L-Qu0DGRXQKLL3lztAxMB5PQdUQb7s"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Thé Signature à la Menthe</h4>
+<p class="text-sm text-on-surface-variant">Recette traditionnelle berbère</p>
+</div>
+</div>
+<span class="font-bold text-on-surface">6,00 €</span>
+</div>
+</div>
+<div class="mt-10 pt-8 border-t border-outline-variant/30">
+<div class="flex justify-between items-center mb-2">
+<span class="text-on-surface-variant">Sous-total</span>
+<span class="font-medium">30,00 €</span>
+</div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-on-surface-variant">Frais de service (0%)</span>
+<span class="font-medium text-secondary">Inclus</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-headline text-2xl font-bold text-on-surface">Total</span>
+<span class="font-headline text-3xl font-bold text-primary">30,00 €</span>
+</div>
+</div>
+</section>
+<!-- Final Action -->
+<div class="pt-4">
+<button class="w-full py-6 rounded-xl bg-gradient-to-r from-primary to-primary-container text-white font-bold text-lg shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 group">
+                    Confirmer ma commande
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<p class="text-center text-on-surface-variant text-sm mt-6 font-medium">
+<span class="material-symbols-outlined text-[16px] align-middle mr-1" data-icon="lock_outline">lock_outline</span>
+                    Paiement sécurisé sur place à l'arrivée
+                </p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Suppressed (Transactional Page Rule) -->
+<!-- Decorative Element: Terracotta Texture -->
+<div class="fixed top-0 right-0 -z-10 opacity-5 pointer-events-none">
+<img alt="Terracotta texture" class="w-80 h-auto" data-alt="abstract close-up of a raw terracotta clay surface with natural earthy textures and subtle firing marks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEKpk7zsrJtcZftdosYA0OCcmVh7-UeoGaZXEYZzvCZpe4h1Xx09GEd643rcsGBsdnjYA6rbrlxquRt2TBEB-Fav_iQB7NbeEPjtqEeeQ4JfMDBqL7yl2nYoK-qHTGliPOeG-kMjvszcmM232zeIQhMVNk4nmrXU73ZpHPt6eshBTyCv3RnqVi_VygHLNEVdYF79eVOjFRs8rcLJXsx3QFm5ZrNIewCZJRtiIuAv3Ka4OL3r-67uTf0b-bg10B43v3FMWHRGUo6umI"/>
+</div>
+</body></html>

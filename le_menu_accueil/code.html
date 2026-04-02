@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L'Escale Terracotta - Menu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f2f2d9",
+              "tertiary-fixed": "#ffdbc9",
+              "background": "#fbfbe2",
+              "tertiary-fixed-dim": "#ffb68c",
+              "secondary": "#735c00",
+              "primary-fixed": "#ffdad3",
+              "on-tertiary": "#ffffff",
+              "surface": "#fbfbe2",
+              "on-secondary-fixed-variant": "#574500",
+              "on-tertiary-fixed-variant": "#753401",
+              "on-surface-variant": "#56423e",
+              "surface-container-low": "#f5f5dc",
+              "on-primary": "#ffffff",
+              "secondary-fixed": "#ffe088",
+              "on-background": "#1b1d0e",
+              "on-primary-container": "#5a0d02",
+              "on-primary-fixed": "#3e0500",
+              "outline": "#89726d",
+              "surface-bright": "#fbfbe2",
+              "primary": "#9f402d",
+              "surface-variant": "#e4e4cc",
+              "on-tertiary-container": "#4b1e00",
+              "tertiary-container": "#d27d47",
+              "inverse-primary": "#ffb4a5",
+              "on-tertiary-fixed": "#321200",
+              "surface-tint": "#9f402d",
+              "on-secondary-container": "#745c00",
+              "outline-variant": "#ddc0ba",
+              "tertiary": "#934b19",
+              "on-error": "#ffffff",
+              "surface-container-high": "#eaead1",
+              "surface-container-highest": "#e4e4cc",
+              "error": "#ba1a1a",
+              "primary-fixed-dim": "#ffb4a5",
+              "on-secondary-fixed": "#241a00",
+              "on-primary-fixed-variant": "#802918",
+              "inverse-surface": "#303221",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#fed65b",
+              "surface-dim": "#dbdcc3",
+              "on-surface": "#1b1d0e",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#e9c349",
+              "primary-container": "#e2725b",
+              "surface-container": "#efefd7"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white">
+<header class="bg-[#FBFBE2]/80 dark:bg-stone-900/80 backdrop-blur-lg docked full-width top-0 sticky z-50 tonal-shift bg-surface-container-low dark:bg-stone-800/50 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center space-x-2 text-[#9F402D] dark:text-[#E2725B]">
+<span class="material-symbols-outlined">location_on</span>
+<span class="font-headline text-lg font-bold tracking-tight">L'Escale Terracotta</span>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-[#9F402D] dark:text-[#E2725B] hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pb-32">
+<section class="px-6 pt-8 pb-4">
+<h1 class="font-headline text-4xl font-bold text-on-background mb-2">Notre Menu</h1>
+<p class="font-body text-on-surface-variant max-w-xs">Savourez une cuisine authentique dans un cadre inspiré par la terre.</p>
+</section>
+<nav class="flex overflow-x-auto no-scrollbar px-6 space-x-4 mb-10">
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full font-label text-sm font-bold whitespace-nowrap active:scale-95 transition-transform">Plats</button>
+<button class="bg-surface-container-high text-on-surface px-6 py-2 rounded-full font-label text-sm font-bold whitespace-nowrap active:scale-95 transition-transform">Desserts</button>
+<button class="bg-surface-container-high text-on-surface px-6 py-2 rounded-full font-label text-sm font-bold whitespace-nowrap active:scale-95 transition-transform">Boissons</button>
+<button class="bg-surface-container-high text-on-surface px-6 py-2 rounded-full font-label text-sm font-bold whitespace-nowrap active:scale-95 transition-transform">Autres</button>
+</nav>
+<section class="px-6 mb-12">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline text-2xl font-bold">Nos Plats Signatures</h2>
+<div class="h-[2px] flex-grow ml-4 bg-outline-variant opacity-20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative group">
+<div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-sm surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Gourmet creamy risotto with sautéed wild mushrooms and a drizzle of aromatic truffle oil in a warm terracotta bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABsbaf0gngL_EJoC54J7K5pUwrR6BHtBnwurx-gxOAp374nuHZrgAj98yG9Ig_dUihua-IfNGmWd2vf9LiamBWBcLgCMAojExrraRHoNFTVZuWG8uFl-bweQ3pintSZAkpQca7MEspsYr0Hb2GK54Fcm1TrdA8jSG8IxuT3l3yqXXHot79egwAVq3A2F_vbQBUJmp9pQcfp9G1RIjAdSwJQkYKQhq0w6ufq-AArDS2teXfQBkFjG8xqcUKfZEQoOXJ7wiaigti7_6b"/>
+</div>
+<div class="absolute -bottom-4 left-4 right-4 bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-xl font-bold">Risotto aux cèpes</h3>
+<span class="font-body font-bold text-primary">18€</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant mb-4">Creamy risotto with wild mushrooms and truffle oil.</p>
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-white py-3 rounded-xl flex items-center justify-center space-x-2 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-sm">add</span>
+<span class="font-label font-bold uppercase tracking-wider text-xs">Ajouter</span>
+</button>
+</div>
+</div>
+<div class="relative group mt-8 md:mt-0">
+<div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-sm surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Exotic grilled salmon with mediterranean vegetables and a light lemon reduction, artfully plated on a textured cream ceramic dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA5h7fYWDo1Q2qd8nUO1l3ALd63fsenWr00a8hiHOLqPAgVBHzcPLnnr56FJCXglCvh07mF8i3o6JnnDcxLPErsoXyUZUIjD5TRfTUyUdmKRezf_k-RFTdVSlp3IGIP1zQVOntngIB5QS2-f4qSE4LVAaQXWITDy4eJ7FXHRgdxNx9kWBpeCyMoFHEM2ZkuoArkSV2myt_DeBkiUtCIk-fwOHv7smAnd-J99R_jVJ23HJFUNRHLfqcRH6YDscuE9hTBIZ40TELbdlm"/>
+</div>
+<div class="absolute -bottom-4 left-4 right-4 bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-xl font-bold">Saumon Grillé</h3>
+<span class="font-body font-bold text-primary">22€</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant mb-4">Grilled salmon served with seasonal garden vegetables.</p>
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-white py-3 rounded-xl flex items-center justify-center space-x-2 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-sm">add</span>
+<span class="font-label font-bold uppercase tracking-wider text-xs">Ajouter</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 mb-12 mt-20">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline text-2xl font-bold">Desserts Artisanaux</h2>
+<div class="h-[2px] flex-grow ml-4 bg-outline-variant opacity-20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex items-center bg-surface-container-low p-4 rounded-[1.5rem] group hover:bg-surface-container-high transition-colors">
+<div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="Decadent molten chocolate fondant cake with a soft center on a dark plate dusted with cocoa powder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyWcp-XFy53deUatVJbj_IJatrhpeQeQXqkbAcbdIEGOtPCBqvJu8Bp5FJvRmsdC2Lm6zPFxFq5BYDrMzOpUvCXf09QFPbt3L6Ry7titHQN1OXv5aHyxi3b4vzmVpqxo4wrZMbQFf8bUu4mAwSeCmERQfRexTHtmOschn-zZfXZExWcWMdtrqwZoXvAx-_6HOu3n0E8RjON_rK4f18i-_fEsqrhMHjHE5cRAHvaHim3P8DzMSHV_f5eM6tIXJbnuOPVEGAutGGy7JO"/>
+</div>
+<div class="ml-6 flex-grow">
+<h3 class="font-headline text-lg font-bold">Fondant au chocolat</h3>
+<p class="font-body text-xs text-on-surface-variant">Cœur coulant, vanille Bourbon.</p>
+<div class="mt-2 flex items-center justify-between">
+<span class="font-body font-bold text-primary">8€</span>
+<button class="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex items-center bg-surface-container-low p-4 rounded-[1.5rem] group hover:bg-surface-container-high transition-colors">
+<div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-alt="Light and airy panna cotta with a vibrant red berry coulis and fresh mint leaf garnish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPUxQN1l2lumZB_a7RpW0MnRgnOJfMS4qLC20boAUy9igQ0xHTEpg5Zo_rwJruHQP_cOmC4AUzxARsiS4dgGOZzJe16xDZxtt-TH58QvOX0sXyil4acalfs6ifGdl4oxF0M9X86BApBO19F-ucmphT8tmpeDvt0Pl7JCuU497DMqzrQvPmJxBFTL8YJqB3Scy1TLFTWQ74LgBKaGOtNwZ9h0jVZIjkxU0DKN6rNcOfEPgrW-lXHWjwUukD_pEZWj4s3mAyqs6CfBry"/>
+</div>
+<div class="ml-6 flex-grow">
+<h3 class="font-headline text-lg font-bold">Panna Cotta</h3>
+<p class="font-body text-xs text-on-surface-variant">Coulis de fruits rouges frais.</p>
+<div class="mt-2 flex items-center justify-between">
+<span class="font-body font-bold text-primary">7€</span>
+<button class="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#FBFBE2]/80 dark:bg-stone-900/80 backdrop-blur-lg z-50 rounded-t-[2rem] border-t border-stone-200/20 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center bg-[#E2725B] dark:bg-[#9F402D] text-white rounded-full px-5 py-2 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-[0.05em] font-bold">Menu</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-[#735C00] dark:hover:text-[#E2725B] active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-[0.05em] font-bold">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-[#735C00] dark:hover:text-[#E2725B] active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-[0.05em] font-bold">My Orders</span>
+</a>
+</nav>
+</body></html>

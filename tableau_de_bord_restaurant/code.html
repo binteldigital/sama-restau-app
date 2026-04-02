@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f2f2d9",
+              "tertiary-fixed": "#ffdbc9",
+              "background": "#fbfbe2",
+              "tertiary-fixed-dim": "#ffb68c",
+              "secondary": "#735c00",
+              "primary-fixed": "#ffdad3",
+              "on-tertiary": "#ffffff",
+              "surface": "#fbfbe2",
+              "on-secondary-fixed-variant": "#574500",
+              "on-tertiary-fixed-variant": "#753401",
+              "on-surface-variant": "#56423e",
+              "surface-container-low": "#f5f5dc",
+              "on-primary": "#ffffff",
+              "secondary-fixed": "#ffe088",
+              "on-background": "#1b1d0e",
+              "on-primary-container": "#5a0d02",
+              "on-primary-fixed": "#3e0500",
+              "outline": "#89726d",
+              "surface-bright": "#fbfbe2",
+              "primary": "#9f402d",
+              "surface-variant": "#e4e4cc",
+              "on-tertiary-container": "#4b1e00",
+              "tertiary-container": "#d27d47",
+              "inverse-primary": "#ffb4a5",
+              "on-tertiary-fixed": "#321200",
+              "surface-tint": "#9f402d",
+              "on-secondary-container": "#745c00",
+              "outline-variant": "#ddc0ba",
+              "tertiary": "#934b19",
+              "on-error": "#ffffff",
+              "surface-container-high": "#eaead1",
+              "surface-container-highest": "#e4e4cc",
+              "error": "#ba1a1a",
+              "primary-fixed-dim": "#ffb4a5",
+              "on-secondary-fixed": "#241a00",
+              "on-primary-fixed-variant": "#802918",
+              "inverse-surface": "#303221",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#fed65b",
+              "surface-dim": "#dbdcc3",
+              "on-surface": "#1b1d0e",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#e9c349",
+              "primary-container": "#e2725b",
+              "surface-container": "#efefd7"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #fbfbe2;
+            color: #1b1d0e;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- NavigationDrawer (Authority: JSON & Design System) -->
+<aside class="hidden lg:flex flex-col h-screen w-72 border-r border-stone-200 bg-[#FBFBE2] py-8 sticky top-0 shrink-0">
+<div class="px-8 mb-12">
+<h1 class="font-headline text-2xl font-bold text-[#9F402D]">Management</h1>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Dashboard (Active) -->
+<a class="flex items-center space-x-4 bg-[#E2725B]/10 text-[#9F402D] border-r-4 border-[#9F402D] px-6 py-4 cursor-pointer transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body font-medium">Dashboard</span>
+</a>
+<a class="flex items-center space-x-4 text-stone-600 px-6 py-4 hover:bg-stone-100 cursor-pointer transition-all" href="#">
+<span class="material-symbols-outlined">pending_actions</span>
+<span class="font-body font-medium">Orders</span>
+</a>
+<a class="flex items-center space-x-4 text-stone-600 px-6 py-4 hover:bg-stone-100 cursor-pointer transition-all" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-body font-medium">Menu Management</span>
+</a>
+<a class="flex items-center space-x-4 text-stone-600 px-6 py-4 hover:bg-stone-100 cursor-pointer transition-all" href="#">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+<span class="font-body font-medium">QR Scanner</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/20 flex items-center gap-3">
+<img alt="Chef" class="w-10 h-10 rounded-full object-cover" data-alt="Close-up portrait of a professional chef in white uniform with a friendly expression in a modern kitchen background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOtBY8z4wLA3W1n2EwWQeTqbYcv1Wey5yrckZTqFcXZlMwlW3dyEwXOAthFIBGnJI4IcXUa9gGVXS2XFgHhHxiKKf_jcV9licsD95cYH8uQeDt9dSbcXaMmniS2xNzo1Tuef7yCsAV55n-6DHHqaKgAvHMgZE-4L4EAn5FvHad-1y7hXPB3A0Zq-z9UERY0TAbddX-30ahiTNq4I48FzVvsUeflnTUrKgmO75KTIjWKe8TfgBbgqHus8oPkNzH-WTjMFJ2-bovDUsI"/>
+<div>
+<p class="text-sm font-bold text-on-surface">Chef Marc-Antoine</p>
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Admin</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col min-w-0">
+<!-- TopAppBar (Authority: JSON & Design System) -->
+<header class="bg-[#FBFBE2]/80 backdrop-blur-lg sticky top-0 z-50 flex justify-between items-center w-full px-8 py-6 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="p-2 rounded-lg bg-primary/5 text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<h2 class="font-headline text-xl font-bold tracking-tight text-[#9F402D]">L'Escale Terracotta - Dashboard</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="text-right hidden md:block">
+<p class="text-sm font-bold text-on-surface">12 Mai 2024</p>
+<p class="text-xs text-on-surface-variant">19:42:05</p>
+</div>
+<div class="relative active:scale-95 duration-200 transition-opacity hover:opacity-80 cursor-pointer text-[#9F402D]">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-secondary text-white text-[10px] flex items-center justify-center rounded-full font-bold">3</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high text-on-surface-variant active:scale-95 duration-200 cursor-pointer">
+<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-8 space-y-10">
+<!-- Bento Stats Overview -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-[2rem] shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 rounded-2xl bg-primary-container/10 text-primary">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest">+12% vs hier</span>
+</div>
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-wider font-bold">Total Couverts</p>
+<h3 class="font-headline text-3xl font-bold text-on-surface mt-1">142</h3>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-[2rem] shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 rounded-2xl bg-secondary-container/20 text-secondary">
+<span class="material-symbols-outlined">timer</span>
+</div>
+<div class="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
+</div>
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-wider font-bold">En Préparation</p>
+<h3 class="font-headline text-3xl font-bold text-on-surface mt-1">8</h3>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-[2rem] shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 rounded-2xl bg-tertiary-container/10 text-tertiary">
+<span class="material-symbols-outlined">euro</span>
+</div>
+</div>
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-wider font-bold">CA du Soir</p>
+<h3 class="font-headline text-3xl font-bold text-on-surface mt-1">4 280 €</h3>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-[2rem] shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 rounded-2xl bg-primary-container text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-wider font-bold">Satisfaction</p>
+<h3 class="font-headline text-3xl font-bold text-on-surface mt-1">4.9 / 5</h3>
+</div>
+</section>
+<!-- Main Order Table (Editorial Style) -->
+<section class="bg-surface-container-low rounded-[2.5rem] overflow-hidden">
+<div class="p-8 flex justify-between items-center bg-surface-container-high/50">
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Commandes du jour</h3>
+<p class="text-on-surface-variant font-body mt-1">Suivi en temps réel de l'activité en salle</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container-lowest px-6 py-2.5 rounded-full text-on-surface font-label text-xs font-bold uppercase tracking-widest shadow-sm hover:bg-white transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">filter_list</span> Filtrer
+                        </button>
+<button class="bg-primary px-6 py-2.5 rounded-full text-white font-label text-xs font-bold uppercase tracking-widest shadow-lg hover:opacity-90 transition-opacity flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">add</span> Nouvelle Table
+                        </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-[10px] uppercase tracking-[0.15em] font-bold text-on-surface-variant/70 border-b border-outline-variant/20">
+<th class="px-8 py-6">Nom du client</th>
+<th class="px-8 py-6">Couverts</th>
+<th class="px-8 py-6">Heure prévue</th>
+<th class="px-8 py-6">Statut</th>
+<th class="px-8 py-6 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1 -->
+<tr class="group hover:bg-surface-container-lowest/40 transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">JD</div>
+<div>
+<p class="font-bold text-on-surface">Jean-Baptiste Dupont</p>
+<p class="text-xs text-on-surface-variant">Table 12</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="font-body font-bold text-on-surface-variant">4 personnes</span>
+</td>
+<td class="px-8 py-6">
+<span class="font-body text-on-surface-variant">19:30</span>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                        En préparation
+                                    </span>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-surface-container-lowest/40 transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary font-bold">CL</div>
+<div>
+<p class="font-bold text-on-surface">Claire Lefebvre</p>
+<p class="text-xs text-on-surface-variant">Table 05 • VIP</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="font-body font-bold text-on-surface-variant">2 personnes</span>
+</td>
+<td class="px-8 py-6">
+<span class="font-body text-on-surface-variant">20:00</span>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-container/20 text-primary text-xs font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                        Reçue
+                                    </span>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="group hover:bg-surface-container-lowest/40 transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center text-stone-600 font-bold">MR</div>
+<div>
+<p class="font-bold text-on-surface">Michel Robert</p>
+<p class="text-xs text-on-surface-variant">Table 18</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="font-body font-bold text-on-surface-variant">6 personnes</span>
+</td>
+<td class="px-8 py-6">
+<span class="font-body text-on-surface-variant">20:15</span>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-green-600"></span>
+                                        Prête
+                                    </span>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="group hover:bg-surface-container-lowest/40 transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center text-stone-600 font-bold">SA</div>
+<div>
+<p class="font-bold text-on-surface">Sophie Arnault</p>
+<p class="text-xs text-on-surface-variant">Table 01</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="font-body font-bold text-on-surface-variant">4 personnes</span>
+</td>
+<td class="px-8 py-6">
+<span class="font-body text-on-surface-variant">19:15</span>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stone-100 text-stone-500 text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                                        Arrivée
+                                    </span>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Bottom Layout Section: Alerts & Quick Stats -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Alerts Card -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-8 rounded-[2rem] border border-outline-variant/10 relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary">warning</span>
+<h4 class="font-headline text-lg font-bold">Alertes Cuisine</h4>
+</div>
+<div class="space-y-4">
+<div class="p-4 rounded-2xl bg-secondary-container/10 border-l-4 border-secondary flex justify-between items-center">
+<div>
+<p class="font-bold text-on-surface">Ingrédient Manquant</p>
+<p class="text-sm text-on-surface-variant">Stock de "Truffe Noire" critique (&lt; 200g)</p>
+</div>
+<button class="text-secondary font-bold text-xs uppercase tracking-widest">Commander</button>
+</div>
+<div class="p-4 rounded-2xl bg-primary-container/5 border-l-4 border-primary flex justify-between items-center">
+<div>
+<p class="font-bold text-on-surface">Nouveaux Avis</p>
+<p class="text-sm text-on-surface-variant">5 nouvelles notes 5 étoiles sur Google Maps</p>
+</div>
+<button class="text-primary font-bold text-xs uppercase tracking-widest">Voir</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Card/Visual -->
+<div class="bg-primary rounded-[2rem] p-8 text-white relative overflow-hidden group">
+<img alt="Plat Signature" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-110 transition-transform duration-700" data-alt="Gourmet plated dish with fine-dining presentation, microgreens, and vibrant sauce droplets on a dark ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApjuhips2HJqvoiD8JjfE7_sPe6MlMOdJGYuv1HqvuXKOwuojlEHYdEwyDaV1rgW5bV2fHh2bjjDWKPzVh4ieTHMWZbTzvAfcoKmXDL6vhEU4EKV4tDbRDZezPiQCdb-97PciWqrQw3pR1CD4gCvNFMPIcxfLJMKDA6hkm_ATmxzqFj9_Oq1P6KhmJ6dfblHjwN_NRFAT378_qvzdXrsdrnbrgvJ46mgJV8EShCnItieLPKLTCw9XThWzuSvoqIG3K4qSDKS5vsLtn"/>
+<div class="relative z-10 h-full flex flex-col justify-end">
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 opacity-80">Promotion du Moment</span>
+<h4 class="font-headline text-2xl font-bold mb-4">Menu Dégustation "Escale d'Automne"</h4>
+<button class="w-fit px-6 py-2 bg-white text-primary rounded-full font-bold text-xs uppercase tracking-widest hover:bg-secondary-container hover:text-on-secondary-container transition-colors">Éditer l'offre</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Navigation (Authority: JSON & Design System) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#FBFBE2]/80 backdrop-blur-lg z-50 rounded-t-[2rem] shadow-[0_-4px_20px_rgba(0,0,0,0.05)] border-t border-stone-200/20">
+<a class="flex flex-col items-center justify-center bg-[#E2725B] text-white rounded-full px-5 py-2 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-[0.05em] font-bold mt-1">Menu</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 px-5 py-2 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-[0.05em] font-bold mt-1">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 px-5 py-2 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-[0.05em] font-bold mt-1">Orders</span>
+</a>
+</nav>
+</body></html>
