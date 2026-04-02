@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, MessageSquare, HeadphonesIcon } from 'lucide-react';
+import { CheckCircle, MessageSquare, HeadphonesIcon } from 'lucide-react';
 
 export default function ConfirmationPage() {
   const orderNumber = Math.floor(10000 + Math.random() * 90000);

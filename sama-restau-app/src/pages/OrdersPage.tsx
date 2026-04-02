@@ -44,7 +44,6 @@ const getStatusConfig = (status: string) => {
 export default function OrdersPage() {
   const [orders, setOrders] = useState<OrderWithItems[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedOrder, setSelectedOrder] = useState<OrderWithItems | null>(null);
   const [showQRCode, setShowQRCode] = useState<OrderWithItems | null>(null);
 
   useEffect(() => {
@@ -54,7 +53,6 @@ export default function OrdersPage() {
   const fetchOrders = async () => {
     try {
       // In a real app, you would get the user ID from auth
-      const userId = 'current-user-id'; // Replace with actual user ID from auth context
       
       const { data, error } = await supabase
         .from('orders')
@@ -166,7 +164,7 @@ export default function OrdersPage() {
                       </button>
                     )}
                     <button 
-                      onClick={() => setSelectedOrder(order)}
+                      onClick={() => alert('Fonctionnalité détails à venir')}
                       className="flex-1 py-2 bg-surface-container-high text-on-surface rounded-lg text-sm font-bold hover:bg-surface-container transition-colors flex items-center justify-center gap-1"
                     >
                       Détails

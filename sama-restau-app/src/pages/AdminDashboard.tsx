@@ -4,7 +4,6 @@ import {
   Clock, 
   Euro, 
   Star, 
-  Filter, 
   Plus, 
   MoreVertical,
   AlertTriangle,
