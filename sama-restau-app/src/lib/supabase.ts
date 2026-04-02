@@ -25,6 +25,7 @@ export interface Order {
   time_slot: string;
   created_at: string;
   customer_name: string;
+  table_number?: string;
 }
 
 export interface OrderItem {

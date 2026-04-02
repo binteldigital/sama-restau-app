@@ -155,7 +155,7 @@ export default function AdminDashboard() {
           ...order,
           initials: order.customer_name?.split(' ').map((n: string) => n[0]).join('') || 'CL',
           name: order.customer_name || 'Client',
-          table: order.table || 'N/A',
+          table: order.table_number || 'N/A',
           avatarColor: 'bg-primary/10 text-primary'
         }));
         setOrders(ordersWithMock);
